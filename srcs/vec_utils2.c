@@ -42,19 +42,17 @@ t_vec	mult(t_vec a, t_vec b)
 
 t_vec	scalar(t_vec a, double num, char op)
 {
-	t_vec	res;
-
 	if (op == '*')
 	{
-		res.x = a.x * num;
-		res.y = a.y * num;
-		res.z = a.z * num;
+		a.x = a.x * num;
+		a.y = a.y * num;
+		a.z = a.z * num;
 	}
 	else if (op == '+')
 	{
-		res.x = a.x + num;
-		res.y = a.y + num;
-		res.z = a.z + num;
+		a.x = a.x + num;
+		a.y = a.y + num;
+		a.z = a.z + num;
 	}
-	return (res);
+	return (a);
 }

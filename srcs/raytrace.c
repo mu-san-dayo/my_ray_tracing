@@ -2,19 +2,16 @@
 
 t_itrsec	calc_itrsec(t_ray ray, t_shape shape)
 {
-	t_itrsec	res;
-
 	if (shape.type == ST_PLANE)
-		res = plane_itrsec(ray, &shape.elem.pl);
+		return (plane_itrsec(ray, &shape.elem.pl));
 	else if (shape.type == ST_SPHERE)
-		res = sphere_itrsec(ray, &shape.elem.sp);
+		return (sphere_itrsec(ray, &shape.elem.sp));
 	else if (shape.type == ST_TRIANGLE)
-		res = triangle_itrsec(ray, &shape.elem.tr);
+		return (triangle_itrsec(ray, &shape.elem.tr));
 	else if (shape.type == ST_SQUARE)
-		res = square_itrsec(ray, &shape.elem.sq);
-	else if (shape.type == ST_CYLINDER)
-		res = cylinder_itrsec(ray, &shape.elem.cy);
-	return (res);
+		return (square_itrsec(ray, &shape.elem.sq));
+	else //(shape.type == ST_CYLINDER)
+		return (cylinder_itrsec(ray, &shape.elem.cy));
 }
 
 t_shape	*get_nearest(t_data *info, t_ray ray)

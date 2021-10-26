@@ -2,9 +2,9 @@
 # define MINIRT_H
 
 # if __APPLE__
-#  include "../minilibx_mms_20200219/mlx.h"
+#  include "macos/mlx.h"
 # elif __linux__
-#  include "../minilibx-linux/mlx.h"
+#  include "linux/mlx.h"
 # endif
 
 # include "../libft/libft.h"

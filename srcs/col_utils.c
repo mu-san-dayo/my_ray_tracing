@@ -30,21 +30,19 @@ t_col	col_mult(t_col a, t_col b)
 
 t_col	col_scalar(t_col a, double num, char op)
 {
-	t_col	res;
-
 	if (op == '*')
 	{
-		res.r = a.r * num;
-		res.g = a.g * num;
-		res.b = a.b * num;
+		a.r = a.r * num;
+		a.g = a.g * num;
+		a.b = a.b * num;
 	}
 	else if (op == '+')
 	{
-		res.r = a.r + num;
-		res.g = a.g + num;
-		res.b = a.b + num;
+		a.r = a.r + num;
+		a.g = a.g + num;
+		a.b = a.b + num;
 	}
-	return (res);
+	return (a);
 }
 
 t_col	col_norm(t_col col)

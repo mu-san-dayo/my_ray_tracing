@@ -20,8 +20,6 @@ int	exit_window(t_data *info)
 {
 	if (info->mlx && info->win)
 		mlx_destroy_window(info->mlx, info->win);
-	if (info->mlx)
-		mlx_destroy_display(info->mlx);
 	exit(0);
 }
 
