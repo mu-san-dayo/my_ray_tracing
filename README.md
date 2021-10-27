@@ -28,7 +28,7 @@ make
 ```bash
 ./miniRT <rt file>
 ```
-### example
+### Example
 
 ```bash
 ./miniRT test.rt
@@ -40,7 +40,7 @@ You can save images as bmp file.
 ./miniRT <rt file> --save
 ```
 
-## images
+## Images
 <img src=images/all_obj.png>
 <img src=images/pika.png>
 <img src=images/mult_light.png>
