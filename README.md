@@ -1,33 +1,47 @@
 # 42Cursus project Level4 "miniRT"
 
-## *Description
+## Description
 
-    This program is to generate images using the Raytracing protocol. 
-    Those computer generated images will each represent a scene, as seen from a specific angle and position, defined by simple geometric objects, and each with its own lighting system.
-    (Minilibx is a small graphics library that can render something to the screen.)
+This project is a graphics program that uses ray tracing.
 
-## *Runnable Environment
+I created a program for ray tracing, a three-dimensional graphic rendering method by calculating light vectors. I used OSS made by 42Tokyo, which uses X11.h, a C library, to draw the results of vector calculations.
 
-    Linux
+It can draw light sources, spheres, planes, triangles, squares, and cylinders. It holds objects in a data structure called linked list, so it can generate as many objects as there is room in the memory. You can draw by entering the window size, multiple cameras, light sources, and object parameters in the configuration file.
 
-## *Available Functions
+If there are multiple cameras, they can be switched using the crosshairs.
 
-    open, close, read, write, printf, malloc, free, perror, strerror, exit
-    All functions of the math library (-lm man man 3 math)
-    All functions of the MinilibX
+## Runnable Environment
 
-## *Usage
+- Linux
+- MacOS
+
+## Available Functions
+
+- open, close, read, write, printf, malloc, free, perror, strerror, exit
+- All functions of the math library (-lm man 3 math)
+- All functions of the MinilibX
+
+## Usage
+```bash
+make
+```
+```bash
+./miniRT <rt file>
+```
+### example
 
 ```bash
-make && ./miniRT <***.rt>
+./miniRT test.rt
 ```
 
 You can save images as bmp file.
 
 ```bash
-make && ./miniRT <***.rt> --save
+./miniRT <rt file> --save
 ```
 
-## *sample images
-<img src=https://github.com/efefish/42C_L04-miniRT/blob/main/sample_img/2021-04-27_8.34.27%20(2).png>
-<img src=https://github.com/efefish/42C_L04-miniRT/blob/main/sample_img/2021-04-27_8.48.57%20(2).png>
+## images
+<img src=images/all_obj.png>
+<img src=images/pika.png>
+<img src=images/mult_light.png>
+
